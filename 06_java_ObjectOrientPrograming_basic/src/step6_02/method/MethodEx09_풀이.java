@@ -70,10 +70,38 @@ class Ex09_Solution {
 	}
 	
 	//문제 6)
-	void printScore3(int [] hakbuns, int [] scores) {}
+	void printScore3(int [] hakbuns, int [] scores) {
+		System.out.print("학번 입력 : ");
+		int hakbun = scan.nextInt();
+		int idx = 0;
+		
+		for(int i = 0; i < hakbuns.length; i++) {
+			if(hakbun == hakbuns[i]) {
+				idx = i;
+				System.out.println("성적 : " + scores[idx] + "점");
+			}
+			else {
+				System.out.println("없는 학번입니다");
+				break;
+			}
+		}
+		
+	}
 	
 	//문제 7)
-	void printNumberOne (int [] hakbuns, int [] scores) {}
+	void printNumberOne (int [] hakbuns, int [] scores) {
+		int high = 0;
+		int idx = 0;
+		
+		for(int i = 0; i < scores.length; i++) {
+			if(high < scores[i]) {
+				high = scores[i];
+				idx = i;
+			}
+		}
+		System.out.println("학번 : " + hakbuns[idx] + "번");
+		System.out.println("성적 : " + scores[idx] + "점");
+	}
 	
 }
 
